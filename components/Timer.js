@@ -72,24 +72,46 @@ class Timer extends React.Component {
     }
 
     handleBreakIncrement = () => {
-        if (this.state.break_time < 59) {
-            this.setState(prevState => ({
-                seconds: prevState.seconds,
-                isRunning: prevState.isRunning,
-                break_time: prevState.break_time + 1,
-                session_time: prevState.session_time,
-            }));
+        if (this.state.session === false){
+            if (this.state.break_time > 1) {
+                this.setState(prevState => ({
+                    seconds: prevState.seconds + 60,
+                    isRunning: prevState.isRunning,
+                    break_time: prevState.break_time + 1,
+                    session_time: prevState.session_time,
+                }));
+            }
+        } else {
+            if (this.state.break_time > 1) {
+                this.setState(prevState => ({
+                    seconds: prevState.seconds,
+                    isRunning: prevState.isRunning,
+                    break_time: prevState.break_time + 1,
+                    session_time: prevState.session_time,
+                }));
+            }
         }
     }
 
     handleBreakDecrement = () => {
-        if (this.state.break_time > 1) {
-            this.setState(prevState => ({
-                seconds: prevState.seconds,
-                isRunning: prevState.isRunning,
-                break_time: prevState.break_time - 1,
-                session_time: prevState.session_time,
-            }));
+        if (this.state.session === false){
+            if (this.state.break_time > 1) {
+                this.setState(prevState => ({
+                    seconds: prevState.seconds - 60,
+                    isRunning: prevState.isRunning,
+                    break_time: prevState.break_time - 1,
+                    session_time: prevState.session_time,
+                }));
+            }
+        } else {
+            if (this.state.break_time > 1) {
+                this.setState(prevState => ({
+                    seconds: prevState.seconds,
+                    isRunning: prevState.isRunning,
+                    break_time: prevState.break_time - 1,
+                    session_time: prevState.session_time,
+                }));
+            }
         }
     }
 
