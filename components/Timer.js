@@ -73,7 +73,7 @@ class Timer extends React.Component {
 
     handleBreakIncrement = () => {
         if (this.state.session === false){
-            if (this.state.break_time > 1) {
+            if (this.state.break_time < 60) {
                 this.setState(prevState => ({
                     seconds: prevState.seconds + 60,
                     isRunning: prevState.isRunning,
@@ -82,7 +82,7 @@ class Timer extends React.Component {
                 }));
             }
         } else {
-            if (this.state.break_time > 1) {
+            if (this.state.break_time < 60) {
                 this.setState(prevState => ({
                     seconds: prevState.seconds,
                     isRunning: prevState.isRunning,
