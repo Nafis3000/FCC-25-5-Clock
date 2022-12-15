@@ -1,5 +1,5 @@
-.FccClock {
-    font-size: 1.5em;
+/* .timer {
+    font-size: 1.5rem;
     font-weight: bold;
     color: #000;
     text-align: center;
@@ -111,7 +111,7 @@
     grid-area: buttons;
   }
   
-.FccClock button {
+.timer button {
     width: 50%;
     height: 100%;
     border: 1px solid rgb(249, 247, 247);
@@ -123,7 +123,148 @@
     margin-top: 0.5em;
 }
 
-.FccClock button:hover {
+.timer button:hover {
     background-color: rgba(255, 255, 255, 0.8);
+} */
+
+.timer {
+  background: linear-gradient(180deg, rgb(255, 41, 3), rgb(81, 46, 148));
+  border: 1px solid rgb(249, 247, 247);
+  aspect-ratio: 1/1;
+  height: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  
 }
 
+.timer h1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer h2 {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer button {
+  width: 50%;
+  height: auto;
+  border: 1px solid rgb(249, 247, 247);
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5em;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.timer button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-shadow: -1px -1px 0 rgb(249, 242, 242), 1px -1px 0 rgb(240, 226, 226), -1px 1px 0 rgb(255, 222, 222), 1px 1px 0 #000;
+
+}
+
+.timer button:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.timer button:focus {
+  outline: none;
+}
+
+.session {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.break {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.session_length_label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: -1px -1px 0 rgb(249, 242, 242), 1px -1px 0 rgb(240, 226, 226), -1px 1px 0 rgb(255, 222, 222), 1px 1px 0 #000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.break_length_label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: -1px -1px 0 rgb(249, 242, 242), 1px -1px 0 rgb(240, 226, 226), -1px 1px 0 rgb(255, 222, 222), 1px 1px 0 #000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.start_stop {
+  align-self: center;
+  justify-self: center;
+}
+
+.reset {
+  align-self: center;
+  justify-self: center;
+}
+
+.timer_label {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-shadow: -1px -1px 0 rgb(249, 242, 242), 1px -1px 0 rgb(240, 226, 226), -1px 1px 0 rgb(255, 222, 222), 1px 1px 0 #000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  justify-self: center;
+}
+
+.time_left{
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-shadow: -1px -1px 0 rgb(249, 242, 242), 1px -1px 0 rgb(240, 226, 226), -1px 1px 0 rgb(255, 222, 222), 1px 1px 0 #000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  justify-self: center;
+}

@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import FccClock from '../components/25-5-Clock'
 import Script from 'next/script'
+import Timer from '../components/Timer'
 
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <FccClock />
+        <Timer />
       </main>
         
     </div>
